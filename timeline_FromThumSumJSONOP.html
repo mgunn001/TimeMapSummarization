@@ -15,6 +15,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
 		 <script src="timeline.js"></script>
     	<script src="imageSliderScript.js"></script>
+    	<script src="imageGridScript.js"></script>
 </head>
 <style type="text/css">
     #timeline {
@@ -166,7 +167,57 @@
 			<img id="myImage" class="heightSet"/>
 			<p id="myContent"></p>
 	</div>
-	
+	<div class="imagegrid_Wrapper content_focusedWrapper">
+		<style type="text/css">
+			
+				hr {
+					border-top: 1px solid #ccc;
+					border-bottom: 1px solid #fff;
+					margin: 25px 0;
+					clear: both;
+				}
+				.centered {
+					text-align: center;
+				}
+				/* ----- Image grids ----- */
+				ul.rig {
+					list-style: none;
+					font-size: 0px; /* should match li left margin */
+				}
+				ul.rig li {
+					display: inline-block;
+					background: #fff;
+					border: 2px solid #ddd;
+					font-size: 16px;
+					font-size: 0.8rem;
+					vertical-align: top;
+					box-shadow: 0 0 5px #ddd;
+					box-sizing: border-box;
+					margin: 10px;
+					-moz-box-sizing: border-box;
+					-webkit-box-sizing: border-box;
+					cursor: pointer;
+				}
+				ul.rig li img {
+					max-width: 100%;
+					height: auto;
+					margin: auto;
+					<!-- margin: 0 0 10px; -->
+				}
+				/* class for 4 columns */
+				ul.rig.columns-4 li {
+					width: 21.5%;
+				}
+				</style>
+				<h1>Image Grid</h1>
+				<p id="myContent"></p>
+				
+				<div class="grid-container">
+					<ul class="rig columns-4">
+					</ul>
+				</div>
+
+	</div>
 
 </div> <!--Container-->
 </body>
