@@ -1,0 +1,88 @@
+
+https://archive-it.org/organizations/484/
+
+https://archive-it.org/collections/4847/
+
+https://archive-it.org/collections/4544/
+
+https://wayback.archive-it.org/4847/*/http:/peterblumgallery.com/
+
+https://wayback.archive-it.org/4544/*/http:/www.chitraganesh.com/
+
+http://discovery.nyarc.org/
+
+https://www.archive-it.org/collections/1068/
+
+https://www.archive-it.org/collections/1757/
+
+https://wayback.archive-it.org/1068/*/http://gulflabor.org/
+
+http://wayback.archive-it.org/1068/20140407144649/http://gulflabor.org/
+
+http://wayback.archive-it.org/1068/20150701214624/http://gulflabor.org/
+
+https://wayback.archive-it.org/1068/*/http://www.cageprisoners.com/
+
+http://wayback.archive-it.org/1068/20110809165130/http://www.cageprisoners.com/ 
+
+http://wayback.archive-it.org/1068/20140328055441/http://www.cageuk.org/
+
+https://wayback.archive-it.org/1068/*/http://www.cofadeh.hn/
+
+http://wayback.archive-it.org/1068/20150701214624/http://www.cofadeh.hn/
+
+http://wayback.archive-it.org/1068/20151001211741/http://www.cofadeh.hn/ 
+
+https://wayback.archive-it.org/1757/*/http://www.brooklynbridgepark.org/
+
+https://wayback.archive-it.org/1757/*/http://www.thelowline.org/
+
+https://wayback.archive-it.org/1757/*/http://newyorkwheel.com/
+
+http://wayback.archive-it.org/1757/20120926202932/http://www.atlanticyards.com/
+
+http://wayback.archive-it.org/1757/20140910211229/http://www.atlanticyards.com/
+
+http://wayback.archive-it.org/1757/20160915222743/http://pacificparkbrooklyn.com/
+
+
+
+
+
+https://wayback.archive-it.org/4847/*/http:/peterblumgallery.com/
+
+https://wayback.archive-it.org/4544/*/http:/www.chitraganesh.com/
+
+https://wayback.archive-it.org/1068/*/http://gulflabor.org/
+
+https://wayback.archive-it.org/1068/*/http://www.cageprisoners.com/
+
+http://wayback.archive-it.org/1068/*/http://www.cageuk.org/
+
+https://wayback.archive-it.org/1068/*/http://www.cofadeh.hn/
+
+https://wayback.archive-it.org/1757/*/http://www.brooklynbridgepark.org/
+
+https://wayback.archive-it.org/1757/*/http://www.thelowline.org/
+
+https://wayback.archive-it.org/1757/*/http://newyorkwheel.com/
+
+http://wayback.archive-it.org/1757/*/http://www.atlanticyards.com/
+
+http://wayback.archive-it.org/1757/*/http://pacificparkbrooklyn.com/
+
+
+
+
+node AlSummarization_OPT_CLI_JSON.js http://peterblumgallery.com/ --oes  --debug --ci 4847
+node AlSummarization_OPT_CLI_JSON.js http://www.chitraganesh.com/ --oes  --debug --ci 4544
+node AlSummarization_OPT_CLI_JSON.js http://gulflabor.org/ --oes  --debug --ci 1068
+node AlSummarization_OPT_CLI_JSON.js http://www.cageprisoners.com/ --oes  --debug --ci 1068
+node AlSummarization_OPT_CLI_JSON.js http://www.cageuk.org/ --oes  --debug --ci 1068
+node AlSummarization_OPT_CLI_JSON.js http://www.cofadeh.hn/ --oes  --debug --ci 1068
+node AlSummarization_OPT_CLI_JSON.js http://www.brooklynbridgepark.org/ --oes  --debug --ci 1757
+node AlSummarization_OPT_CLI_JSON.js http://www.thelowline.org/ --oes  --debug --ci 1757
+node AlSummarization_OPT_CLI_JSON.js http://newyorkwheel.com/ --oes  --debug --ci 1757
+node AlSummarization_OPT_CLI_JSON.js http://www.atlanticyards.com/ --oes  --debug --ci 1757
+node AlSummarization_OPT_CLI_JSON.js http://pacificparkbrooklyn.com/ --oes  --debug --ci 1757
+

@@ -558,7 +558,8 @@
         }
     });
     $(function(){
-		$.get('thumbsumJsonOP.json',function(response) {
+         var curJSONFileName= "timemapsumjson_"+collectionsList[parseInt(location.search.split("=")[1])-1].replace(/[^a-z0-9]/gi, '').toLowerCase();
+		$.get(curJSONFileName+'.json',function(response) {
 			console.log(response);
 			var timelineData = response;
 			window.timeline = new Timeline(timelineData);

@@ -23,12 +23,19 @@ var imagesData = [];
 					
 					window.open(imagesData[column].event_link);
 				});
-				
+				var curJSONFileName= "timemapsumjson_"+collectionsList[parseInt(location.search.split("=")[1])-1].replace(/[^a-z0-9]/gi, '').toLowerCase();
+
 				$.ajax({
-					url: 'thumbsumJsonOP.json',
+					url: curJSONFileName+'.json',
 					dataType: 'json',
 					success: function(data) {
-						imagesData = data;
+
+						$.each(data, function (index, obj) {
+							if($(obj.event_html).attr("src").indexOf("notcaptured") < 0){
+								imagesData.push(obj);
+							}
+						});
+
 						$('#myImage').attr('src', $(imagesData[0].event_html).attr("src"));
 						slideImage(0);
 					}
