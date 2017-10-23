@@ -6,7 +6,7 @@
     <link href="style_timeline.css" rel="stylesheet" />
     
     <script>
-		var collectionsList=["http://peterblumgallery.com/","http://www.chitraganesh.com/",,"http://gulflabor.org/","http://www.cageprisoners.com/","http://www.cageuk.org/","http://www.cofadeh.hn/","http://www.brooklynbridgepark.org/","http://www.thelowline.org/","http://newyorkwheel.com/","http://www.atlanticyards.com/","http://pacificparkbrooklyn.com/"];
+		var collectionsList=["http://peterblumgallery.com/","http://www.chitraganesh.com/","http://gulflabor.org/","http://www.cageprisoners.com/","http://www.cageuk.org/","http://www.cofadeh.hn/","http://www.brooklynbridgepark.org/","http://www.thelowline.org/","http://newyorkwheel.com/","http://www.atlanticyards.com/","http://pacificparkbrooklyn.com/"];
     </script>
     <script type="text/javascript" src="script.js" charset="utf-8"></script>
 
@@ -17,11 +17,20 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
 		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">		
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		 <script src="timeline.js"></script>
     	<script src="imageSliderScript.js"></script>
     	<script src="imageGridScript.js"></script>
 </head>
 <style type="text/css">
+
+	.collection_name{
+		font-size: 16px;
+   	 	margin-left: 0.5%
+	}
+
+
     #timeline {
         width: 99% !important;
         padding: 0 !important;
@@ -47,7 +56,7 @@
 <body class="special old-page-new-wrapper">
 <div class="container">
 	<div class="timeline_Wrapper content_focusedWrapper">
-		<h1>Timeline</h1>
+		<h1>Timeline<span class="collection_name"></span></h1>
 		<div class="article">
 			<div id="timeline">
 				<div id="timeline_top_matter_container">
@@ -105,7 +114,7 @@
 			</script>
 		</div>
 	</div>
-	<div class="imageslider_wrapper content_focusedWrapper">
+	<div class="imageslider_wrapper content_focusedWrapper" style="margin-top: 1%;">
 		<style>
 			#myImage {
 				margin-left: 33%;
@@ -161,7 +170,7 @@
 				max-height: 300px;
 			}
 		</style>
-			<h1>Image Slider</h1>
+			<h1>Image Slider<span class="collection_name"></span></h1>
 			<h2>Swipe over the images to move through time</h2>
 			<h2>Click on an image to view the memento</h2>
 			<div>
@@ -213,7 +222,7 @@
 					width: 21.5%;
 				}
 				</style>
-				<h1>Image Grid</h1>
+				<h1>Image Grid<span class="collection_name"></span></h1>
 				<p id="myContent"></p>
 				
 				<div class="grid-container">
