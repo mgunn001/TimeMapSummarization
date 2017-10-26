@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>UI Initial Draft</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	</head>
+	<body>
+
+		<div class="container-fluid" style="max-width:90%;">
+			<div class="well row attributesWrapper" style="margin-top: 1%;">
+				<div class="row URIWrapper" >			
+					  <div class="form-group">
+					    <label for="urirIP">Enter URI-R:</label>
+					    <input class="form-control" id="urirIP">
+					  </div>
+				</div>
+
+				<div class="row orgAndCollNoWrapper form-inline" >
+					<div class="form-group ">
+						<label class="radio-inline"><input type="radio" name="optradio">Archive-IT</label>
+						<label class="radio-inline"><input type="radio" name="optradio">Internet Archive</label>
+						<label class="radio-inline"><input type="radio" name="optradio">Memgator</label>
+					</div>
+					<div class="form-group pull-right">
+						<label for="collectionNo">Collection Number</label>
+					    <input class="form-control" type="number" title="Collection Number" id="collectionNo">
+					</div>
+				</div>
+			</div>
+
+			<div class="statsWrapper row">
+					<p> <b>Stats Go here </b></p>
+			</div>
+
+			<div class="row tabContentWrapper">
+				<ul class="nav nav-tabs">
+				  <li class="active"><a data-toggle="tab" href="#timeMap">TimeMap</a></li>
+				  <li><a data-toggle="tab" href="#imageSlider">Slider</a></li>
+				  <li><a data-toggle="tab" href="#imageGrid">Grid</a></li>
+				</ul>
+
+				<div class="tab-content">
+				  <div id="timeMap" class="tab-pane fade in active">
+				    <h3>Time Map</h3>
+				    <p>content Here.</p>
+				  </div>
+				  <div id="imageSlider" class="tab-pane fade">
+				    <h3>Image Slider</h3>
+				    <p>content Here.</p>
+				  </div>
+				  <div id="imageGrid" class="tab-pane fade">
+				    <h3>Image Grid</h3>
+				    <p>content Here.</p>
+				  </div>
+				</div>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>

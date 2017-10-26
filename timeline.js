@@ -565,6 +565,7 @@
 			console.log(response);
 			var timelineData = response;
 			window.timeline = new Timeline(timelineData);
+            $("[data-notch-series='Non-Thumbnail Mementos']").width("2px");
 			new Zoom("in");
 			new Zoom("out");
 			var chooseNext = new Chooser("next");

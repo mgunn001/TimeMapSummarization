@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,26 +8,74 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">		
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		.panel-heading{
+			font-weight: bold;
+			color: blue !important;
+		}
+		.collection_stats{
+			font-weight: bold;
+			font-size: 16px;
+		}
+
+	</style>
 </head>
+
 <body>
 	<div class="container-fluid " style="margin-top: 3%;
     width: 80%;">
-    <div> <h2> TimeMap Summarization Demo </h2>
+    <div> <h2 style="color: blue !important"> TimeMap Summarization Demo </h2>
  		<div class="example_collectionList well">
- 			<h4> Example Collection List</h4>
-			<ul style="font-size: 25px;">
-				<li><a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=1" target="_blank"> 4847: http://peterblumgallery.com </a></li>
-				<li><a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=2" target="_blank"> 4544: http://www.chitraganesh.com </a></li>
-				<li><a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=3" target="_blank"> 1068: http://gulflabor.org </a></li>
-				<li><a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=4" target="_blank"> 1068: http://www.cageprisoners.com </a></li>
-				<li><a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=5" target="_blank"> 1068: http://www.cageuk.org </a></li>
-				<li><a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=6" target="_blank"> 1068: http://www.cofadeh.hn </a></li>
-				<li><a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=7" target="_blank"> 1757: http://www.brooklynbridgepark.org</a></li>
-				<li><a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=8" target="_blank"> 1757: http://www.thelowline.org </a></li>
-				<li><a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=9" target="_blank"> 1757: http://newyorkwheel.com </a></li>
-				<li><a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=10" target="_blank"> 1757: http://www.atlanticyards.com</a></li>
-				<li><a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=11" target="_blank"> 1757: http://pacificparkbrooklyn.com</a></li>			
-			</ul>
+ 			<div class="panel panel-default">
+			  <div class="panel-heading">Collection 4847 - New York City Galleries By NYARC</div>
+			  <div class="panel-body">
+			  	<ul style="font-size: 25px;">
+					<li><span class="seedURI">http://peterblumgallery.com </span><span class="collection_stats">- 45 mementos, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=1" target="_blank">2 Unique Thumbnails(k=4)</a>, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarizationhdt3/timeline_FromThumSumJSONOP.html?view=1" target="_blank">4 Unique Thumbnails(k=3)</a></span></li>
+
+					<li>http://www.chitraganesh.com <span class="collection_stats">- 15 mementos, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=2" target="_blank">1 Unique Thumbnail(k=4)</a>, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarizationhdt3/timeline_FromThumSumJSONOP.html?view=2" target="_blank">1 Unique Thumbnail(k=3) </a></span></li> 
+				</ul>
+			  </div>
+			</div>
+
+			<div class="panel panel-default">
+			  <div class="panel-heading">Collection 1068 - Human Rights By CUL</div>
+			  <div class="panel-body">
+			  	<ul style="font-size: 25px;">
+
+					<li>http://gulflabor.org <span class="collection_stats">- 27 mementos, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=3" target="_blank">9 Unique Thumbnails(k=4)</a>, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarizationhdt3/timeline_FromThumSumJSONOP.html?view=3" target="_blank">10 Unique Thumbnails(k=3)</a></span></li>
+
+
+					<li>http://www.cageprisoners.com <span class="collection_stats">- 20 mementos, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=4" target="_blank"> 1 Unique Thumbnails(k=4)</a>, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarizationhdt3/timeline_FromThumSumJSONOP.html?view=4" target="_blank"> 7 Unique Thumbnails(k=3)</a></span></li>
+
+
+					<li>http://www.cageuk.org <span class="collection_stats">- 14 mementos, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=5" target="_blank">2 Unique Thumbnails(k=4)</a>, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarizationhdt3/timeline_FromThumSumJSONOP.html?view=5" target="_blank"> 3 Unique Thumbnails(k=3)</a></span></li>
+
+
+					<li>http://www.cofadeh.hn <span class="collection_stats">- 14 mementos, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=6" target="_blank">2 Unique Thumbnails(k=4)</a>, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarizationhdt3/timeline_FromThumSumJSONOP.html?view=6" target="_blank">3 Unique Thumbnails(k=3)</a></span></li>
+				</ul>
+			  </div>
+			</div>
+
+			<div class="panel panel-default">
+			  <div class="panel-heading">Collection 1757 - Avery Library Historic Preservation and Urban Planning By CUL</div>
+			  <div class="panel-body">
+			  	<ul style="font-size: 25px;">
+					<li>http://www.brooklynbridgepark.org <span class="collection_stats">- 36 mementos, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=7" target="_blank">12 Unique Thumbnails(k=4)</a>, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarizationhdt3/timeline_FromThumSumJSONOP.html?view=7" target="_blank">12 Unique Thumbnails(k=3)</a></span></li>
+
+
+					<li>http://www.thelowline.org <span class="collection_stats">- 23 mementos, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=8" target="_blank">3 Unique Thumbnails(k=4)</a>, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarizationhdt3/timeline_FromThumSumJSONOP.html?view=8" target="_blank"> 5 Unique Thumbnails(k=3)</a></span></li>
+
+
+					<li>http://newyorkwheel.com <span class="collection_stats">- 6 mementos, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=9" target="_blank">2 Unique Thumbnails(k=4)</a>, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarizationhdt3/timeline_FromThumSumJSONOP.html?view=9" target="_blank">2 Unique Thumbnails(k=3)</a></span></li>
+
+
+					<li>http://www.atlanticyards.com <span class="collection_stats">- 27 mementos, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=10" target="_blank">5 Unique Thumbnails(k=4)</a>, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarizationhdt3/timeline_FromThumSumJSONOP.html?view=10" target="_blank">6 Unique Thumbnails(k=3)</a></span></li>
+
+
+					<li>http://pacificparkbrooklyn.com <span class="collection_stats">- 21 mementos, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarization/timeline_FromThumSumJSONOP.html?view=11" target="_blank">1 Unique Thumbnail(k=4)</a>, <a href="http://www.cs.odu.edu/~mgunnam/TimeMapSummarizationhdt3/timeline_FromThumSumJSONOP.html?view=11" target="_blank">1 Unique Thumbnail(k=3)</a></span></li>		
+				</ul>
+			  </div>
+			</div>
 		</div>
 	</div>
 </body>
