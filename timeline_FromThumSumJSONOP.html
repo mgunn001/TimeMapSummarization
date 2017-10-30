@@ -89,9 +89,12 @@
 						<span class="timeline_year_notch_year_text"><%= year %></span>
 					</div>
 			</script>
+			
+			<!-- ByMAhee-- Added another class that could tell what type of notch series it is  -->			
 			<script id="notch_tmpl" type="text/jst">
-					<div style="background:<%= topcolor %>" data-notch-series="<%= event_series %>" class="timeline_notch notch_<%= timestamp %>" data-timestamp="<%= timestamp %>"></div>
+					<div style="background:<%= topcolor %>" data-notch-series="<%= event_series %>" class="timeline_notch notch_<%= timestamp %>  notch_<%= event_series %> " data-timestamp="<%= timestamp %>"></div>
 			</script>
+
 			<script id="series_legend_tmpl" type="text/jst">
 					<div class="series_legend_item" data-series="<%= name %>"><span class="series_legend_swatch" style="background-color:<%= color %>">&nbsp;</span> <span class="series_legend_text"><%= name %></span></div>
 			</script>

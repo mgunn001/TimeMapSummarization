@@ -295,7 +295,7 @@
     observable(CardContainer.prototype);
     transformable(CardContainer.prototype);
 
-    var COLORS = ["#EDC047", "#141414", "#91ADD1", "#929E5E", "#9E5E23", "#C44846", "#065718", "#EDD4A5", "#CECECE"];
+    var COLORS = ["#EDC047", "#948989", "#91ADD1", "#929E5E", "#9E5E23", "#C44846", "#065718", "#EDD4A5", "#CECECE"];
 
     var color = function(){
         var chosen;
@@ -512,7 +512,10 @@
         this.direction = direction;
         this.el = $(this.prefix + direction);
         var that = this;
-        this.el.bind('click', function(e) { e.preventDefault(); that.click(e);});
+        this.el.bind('click', function(e) { 
+            e.preventDefault(); 
+            that.click(e);
+        });
     };
 
 
@@ -545,7 +548,14 @@
         prefix: ".timeline_choose_",
         click: function(e){
             var el;
-            var notches    = this.notches.not(".series_inactive");
+
+            
+            /*Just commenting the following line, as the click of next and previous must be taken only to Thumbnail part,
+             * So have manually added up a class to the nothces itself, in <script id="notch_tmpl" type="text/jst"> of timeline_*.html */
+            //var notches    = this.notches.not(".series_inactive"); 
+            var notches    = this.notches.not(".notch_Non-Thumbnail"); 
+
+
             var curCardIdx = notches.index($(".timeline_notch_active"));
             var numOfCards = notches.length;
             if (this.direction === "next") {
@@ -565,8 +575,11 @@
 			console.log(response);
 			var timelineData = response;
 			window.timeline = new Timeline(timelineData);
+            // place where the notch width is being reduced t0 2px.
             $("[data-notch-series='Non-Thumbnail Mementos']").width("2px");
-			new Zoom("in");
+            // Color is changed in the Array at 284 line as that is the right place
+           // $("[data-notch-series='Non-Thumbnail Mementos']").css("background","#948989");			
+            new Zoom("in");
 			new Zoom("out");
 			var chooseNext = new Chooser("next");
 			var choosePrev = new Chooser("prev");
