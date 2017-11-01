@@ -548,7 +548,7 @@
         prefix: ".timeline_choose_",
         click: function(e){
             var el;
-            /*Just commenting the following line, as the click of next and previous must be taken only to Thumbnail part,
+             /*Just commenting the following line, as the click of next and previous must be taken only to Thumbnail part,
              * So have manually added up a class to the nothces itself, in <script id="notch_tmpl" type="text/jst"> of timeline_*.html */
             //var notches    = this.notches.not(".series_inactive"); 
             var notches    = this.notches.not(".series_inactive"); 
@@ -558,6 +558,11 @@
                             isOnlyNTMSelected = true;    
                 }
             }
+
+            if(!isOnlyNTMSelected){
+                  notches    = notches.not(".notch_Non-Thumbnail"); 
+            }
+
 
             var curCardIdx = notches.index($(".timeline_notch_active"));
             var numOfCards = notches.length;

@@ -86,3 +86,16 @@ node AlSummarization_OPT_CLI_JSON.js http://newyorkwheel.com/ --oes  --debug --c
 node AlSummarization_OPT_CLI_JSON.js http://www.atlanticyards.com/ --oes  --debug --ci 1757 --hdt 3
 node AlSummarization_OPT_CLI_JSON.js http://pacificparkbrooklyn.com/ --oes  --debug --ci 1757 --hdt 3
 
+
+
+node AlSummarization_OPT_CLI_JSON.js http://peterblumgallery.com/ --oes  --debug --ci 4847
+node AlSummarization_OPT_CLI_JSON.js http://www.chitraganesh.com/ --oes  --debug --ci 4544
+node AlSummarization_OPT_CLI_JSON.js http://gulflabor.org/ --oes  --debug --ci 1068
+node AlSummarization_OPT_CLI_JSON.js http://www.cageprisoners.com/ --oes  --debug --ci 1068
+node AlSummarization_OPT_CLI_JSON.js http://www.cageuk.org/ --oes  --debug --ci 1068
+node AlSummarization_OPT_CLI_JSON.js http://www.cofadeh.hn/ --oes  --debug --ci 1068
+node AlSummarization_OPT_CLI_JSON.js http://www.brooklynbridgepark.org/ --oes  --debug --ci 1757
+node AlSummarization_OPT_CLI_JSON.js http://www.thelowline.org/ --oes  --debug --ci 1757
+node AlSummarization_OPT_CLI_JSON.js http://newyorkwheel.com/ --oes  --debug --ci 1757
+node AlSummarization_OPT_CLI_JSON.js http://www.atlanticyards.com/ --oes  --debug --ci
+node AlSummarization_OPT_CLI_JSON.js http://pacificparkbrooklyn.com/ --oes  --debug --ci
