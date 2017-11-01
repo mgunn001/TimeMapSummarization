@@ -56,6 +56,13 @@
 	.content_focusedWrapper{
 		margin-top: 5%;
 	}
+	.similarToPictureEle img{
+		width: 250px;
+    	height: 200px;
+	}
+	.similarToPictureEle h2{
+			font-weight: bolder;
+	}
 </style>
 
 <body class="special old-page-new-wrapper">
@@ -103,12 +110,36 @@
 						<div class="css_arrow css_arrow_up" style="border-bottom-color:<%= topcolor %>"></div>
 						<div class="item" data-timestamp="<%= timestamp %>" style="border-top:1px solid <%= topcolor %>">
 							<div class="item_label">
-								<% if (!_.isEmpty(event_html)){ %>
+
+								<!--  the following code is modfied to get the simillar to showing for the non-thumnail version -->
+								<!-- <% if (!_.isEmpty(event_html)){ %>
 									<div class="item_user_html">
 										<%= event_html %>
 									</div>
-									<% } %>
-										<%= event_description %>
+								<% } %> -->
+								<% if (event_series=='Thumbnails'){%>
+                                    <% if (!_.isEmpty(event_html)){ %>
+                                        <div class="item_user_html">
+                                            <%= event_html %>
+                                            
+                                        </div>
+                                        <% } %>
+                                <% } %>
+                                
+                                <% if (event_series=='Non-Thumbnail Mementos'){%>
+                                    <% if (!_.isEmpty(event_html_similarto)){ %>
+                                        <div class="item_user_html similarToPictureEle">
+                                        	<h2> Similar To </h2>
+                                            <%= event_html_similarto %>
+                                            
+                                        </div>
+                                        <% } %>
+                                <% } %>
+
+
+
+
+								<%= event_description %>
 							</div>
 							<% if (!_.isEmpty(event_link)){ %>
 								<div class="read_btn"><a target="_blank" href="<%= event_link %>">Open Archived Page</a></div>
