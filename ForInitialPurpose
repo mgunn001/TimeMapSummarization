@@ -97,5 +97,5 @@ node AlSummarization_OPT_CLI_JSON.js http://www.cofadeh.hn/ --oes  --debug --ci 
 node AlSummarization_OPT_CLI_JSON.js http://www.brooklynbridgepark.org/ --oes  --debug --ci 1757
 node AlSummarization_OPT_CLI_JSON.js http://www.thelowline.org/ --oes  --debug --ci 1757
 node AlSummarization_OPT_CLI_JSON.js http://newyorkwheel.com/ --oes  --debug --ci 1757
-node AlSummarization_OPT_CLI_JSON.js http://www.atlanticyards.com/ --oes  --debug --ci
-node AlSummarization_OPT_CLI_JSON.js http://pacificparkbrooklyn.com/ --oes  --debug --ci
+node AlSummarization_OPT_CLI_JSON.js http://www.atlanticyards.com/ --oes  --debug --ci 1757
+node AlSummarization_OPT_CLI_JSON.js http://pacificparkbrooklyn.com/ --oes  --debug --ci 1757
