@@ -8,6 +8,31 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script>
+				 $(document).ready(function() {
+
+				 	$(".getJSONFromServer").click(function(){
+
+				 		var queryStr= $(".register-form").serialize();	    		
+			    		$.ajax({
+				          type: "GET",
+				         //url: "/Prod_StudentAppointmentSystem/addFaculyRegistration.php?"+queryStr,
+				          url: "/"+SERVERHOST+"_StudentAppointmentSystem/addFaculyRegistration.php?"+queryStr,
+				          dataType: "text",
+				          success: function( data, textStatus, jqXHR) {			      				       				     
+			    			var msg= $.trim(data);
+			    			// alert($.trim(data));
+						    // window.location.href = "http://qav2.cs.odu.edu/Maheedhar/StudentRecruitmentTS/home.php";				     
+						     successPopUpWithRD(msg);				    	 
+				          },
+			  			  error: function( data, textStatus, jqXHR) {
+			  		      	var errMsg = "some problem while Registration!";
+			  		      	errorPopUp(errMsg);	 
+			  		      }
+					});
+
+				 });
+		</script>
 
 	</head>
 	<body>
@@ -30,6 +55,7 @@
 					<div class="form-group pull-right">
 						<label for="collectionNo">Collection Number</label>
 					    <input class="form-control" type="number" title="Collection Number" id="collectionNo">
+					    <button class="btn getJSONFromServer"> Go </button>
 					</div>
 				</div>
 			</div>
