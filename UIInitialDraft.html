@@ -3,35 +3,50 @@
 		<title>UI Initial Draft</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+		<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		 <script src="timeline.js"></script>
+    	<script src="imageSliderScript.js"></script>
+    	<script src="imageGridScript.js"></script>
+
+
+
 		<script>
+				var jsonObjRes = {};
 				 $(document).ready(function() {
+				 	var SERVERHOST = "http://localhost:3000/GetResponse";
+				 	
+				 	$(".getJSONFromServer").click(function(event){
+					 	if($(this).parents("form")[0].checkValidity()){
+					 			event.preventDefault();
 
-				 	$(".getJSONFromServer").click(function(){
+					 		var queryStr="?"+$(".argumentsForm input").serialize();	    		
+				    		$.ajax({
+					          type: "GET",
+					          url: SERVERHOST+queryStr,
+					          dataType: "text",
+					          success: function( data, textStatus, jqXHR) {			      				       				     
+				    			jsonObjRes= $.parseJSON($.trim(data));
 
-				 		var queryStr= $(".register-form").serialize();	    		
-			    		$.ajax({
-				          type: "GET",
-				         //url: "/Prod_StudentAppointmentSystem/addFaculyRegistration.php?"+queryStr,
-				          url: "/"+SERVERHOST+"_StudentAppointmentSystem/addFaculyRegistration.php?"+queryStr,
-				          dataType: "text",
-				          success: function( data, textStatus, jqXHR) {			      				       				     
-			    			var msg= $.trim(data);
-			    			// alert($.trim(data));
-						    // window.location.href = "http://qav2.cs.odu.edu/Maheedhar/StudentRecruitmentTS/home.php";				     
-						     successPopUpWithRD(msg);				    	 
-				          },
-			  			  error: function( data, textStatus, jqXHR) {
-			  		      	var errMsg = "some problem while Registration!";
-			  		      	errorPopUp(errMsg);	 
-			  		      }
-					});
 
-				 });
+				    			console.log(jsonObjRes);			       	 
+					          },
+				  			  error: function( data, textStatus, jqXHR) {
+				  		      	var errMsg = "some problem fetching the response";
+				  		      	alert(errMsg);	 
+				  		      }
+							});
+				 		}
+				 		
+				 	});
+				});
 		</script>
 
 	</head>
@@ -39,25 +54,28 @@
 
 		<div class="container-fluid" style="max-width:90%;">
 			<div class="well row attributesWrapper" style="margin-top: 1%;">
-				<div class="row URIWrapper" >			
-					  <div class="form-group">
-					    <label for="urirIP">Enter URI-R:</label>
-					    <input class="form-control" id="urirIP">
-					  </div>
-				</div>
+				<form action="#" class="argumentsForm">
+					<div class="row URIWrapper" >			
+						  <div class="form-group">
+						    <label for="urirIP">Enter URI-R:</label>
+						    <input class="form-control" name="URI-R" id="urirIP" required placeholder="http://4genderjustice.org/">
+						  </div>
+					</div>
 
-				<div class="row orgAndCollNoWrapper form-inline" >
-					<div class="form-group ">
-						<label class="radio-inline"><input type="radio" name="optradio">Archive-IT</label>
-						<label class="radio-inline"><input type="radio" name="optradio">Internet Archive</label>
-						<label class="radio-inline"><input type="radio" name="optradio">Memgator</label>
+					<div class="row orgAndCollNoWrapper form-inline" >
+						
+							<div class="form-group">
+								<label class="radio-inline"><input type="radio" name="primesource" checked="checked" value="archiveit">Archive-IT</label>
+								<label class="radio-inline"><input type="radio" name="primesource" value="internetarchive">Internet Archive</label>
+		<!-- 						<label class="radio-inline"><input type="radio" name="optradio">Memgator</label>
+		 -->					</div>
+							<div class="form-group pull-right">
+								<label for="collectionNo">Collection Number</label>
+							    <input class="form-control" type="number" title="Collection Number"  name="ci" required id="collectionNo" placeholder="1068">
+							    <button class="btn getJSONFromServer"> Go </button>
+							</div>					
 					</div>
-					<div class="form-group pull-right">
-						<label for="collectionNo">Collection Number</label>
-					    <input class="form-control" type="number" title="Collection Number" id="collectionNo">
-					    <button class="btn getJSONFromServer"> Go </button>
-					</div>
-				</div>
+				</form>
 			</div>
 
 			<div class="statsWrapper row">
